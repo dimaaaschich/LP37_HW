@@ -20,7 +20,20 @@ def main():
     Эта функция вызывается автоматически при запуске скрипта в консоли
     В ней надо заменить pass на ваш код
     """
-    pass
+def compare_str(first, second):
+        if not (isinstance(first, str) and isinstance(second, str)):
+            return 0
+        elif first == second:
+            return 1
+        elif second == 'learn' and second != first:
+            return 3
+        elif len(first) > len(second):
+            return 2
+    
+    print(compare_str(1, 'string'))
+    print(compare_str('one', 'one'))
+    print(compare_str('longer', 'short'))
+    print(compare_str('Python', 'learn'))
     
 if __name__ == "__main__":
     main()
