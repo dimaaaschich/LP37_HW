@@ -21,7 +21,16 @@ def ask_user(answers_dict):
     """
     Замените pass на ваш код
     """
-    pass
+my_dict = {"Как дела": "Хорошо!", "Что делаешь?": "Программирую"}
     
+    #def ask_user(input):
+user = input('Задайте вопрос ')
+#    print(user in my_dict)
+def ask_user(my_dict):
+    while user in my_dict:
+        print(my_dict.get(user))
+        break
+ask_user(my_dict)
+
 if __name__ == "__main__":
     ask_user(questions_and_answers)
