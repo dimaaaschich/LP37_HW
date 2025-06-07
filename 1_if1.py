@@ -19,19 +19,19 @@ def main():
     Эта функция вызывается автоматически при запуске скрипта в консоли
     В ней надо заменить pass на ваш код
     """
-age = int(input('Введите, пожалуйста, свой возраст '))
-    
-    def who_r_u():    
-        if age <= 6:
-            return 'Вы учитесь в детском саду'
-        elif 6 < age <= 17:
-            return 'Вы учитесь в школе'
-        elif 17 < age <= 24:
-            return 'Вы учитесь в ВУЗе'
-        else:
-            return 'Вы работаете'
+    age = int(input('Введите, пожалуйста, свой возраст '))
+       
+    if age <= 6:
+        return 'Вы учитесь в детском саду'
+    elif 6 < age <= 17:
+        return 'Вы учитесь в школе'
+    elif 17 < age <= 24:
+        return 'Вы учитесь в ВУЗе'
+    else:
+        return 'Вы работаете'
 
-    result = who_r_u()
+    result = main(input())
+    
     print(result)
 
 

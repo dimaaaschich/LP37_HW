@@ -20,12 +20,12 @@ def main():
     Эта функция вызывается автоматически при запуске скрипта в консоли
     В ней надо заменить pass на ваш код
     """
-def compare_str(first, second):
+    def compare_str(first, second):
         if not (isinstance(first, str) and isinstance(second, str)):
             return 0
         elif first == second:
             return 1
-        elif second == 'learn' and second != first:
+        elif second == 'learn':
             return 3
         elif len(first) > len(second):
             return 2

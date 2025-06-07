@@ -16,7 +16,7 @@ def hello_user():
     """
     while True:
       intro = input('Как дела? ')
-      if intro == 'Хорошо':
+      if intro.lower().strip() == 'хорошо':
          break
     
 if __name__ == "__main__":
