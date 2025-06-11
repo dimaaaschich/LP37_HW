@@ -17,9 +17,12 @@
 
 questions_and_answers = {"Как дела": "Хорошо!", "Что делаешь?": "Программирую", 'Можно выйти?': 'Неа!'}
 
-def ask_user(ask):
-    while ask in questions_and_answers:
-        print(questions_and_answers.get(ask))
+def ask_user():
+    ask = input('скажи что-то \n')
+    while True:
+        if ask in questions_and_answers:
+            print(questions_and_answers.get(ask))
+        else:
+            print('Пока!')
         break
-
-ask_user(input('Задайте вопрос \n'))
+ask_user()

@@ -24,12 +24,13 @@ def discounted(price, discount, max_discount=20):
             return price
         else:
             return price - (price * discount / 100)
-    except (ValueError, TypeError):
-        return 'Некорректные данные'
-
+    except (TypeError):
+        return 'Некорректные данные типа'
+    except (ValueError):
+       return 'Некорректные данные значения'
 
 if __name__ == "__main__":
-    print(discounted(100, 2))
+    print(discounted(100, [2, 5]))
     print(discounted(100, "3"))
     print(discounted("100", "4.5"))
     print(discounted("five", 5))
